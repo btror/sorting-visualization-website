@@ -7,9 +7,73 @@ ctx.beginPath();
 ctx.fillStyle = "black";
 ctx.font="17px Verdana";
 
+function showCode4() {
+    var code1 = "\n" 
+    + " 1  // shell sort\n" 
+    + " 2  var n = list.length;\n"
+    + " 3  var gap = n;\n"
+    + " 4  var swapped = true;\n"
+    + " 5  while (gap != 1 || swapped === true) {\n"
+    + " 6     gap = Math.floor((gap * 10) / 13);\n"
+    + " 7     if (gap < 1) {\n"
+    + " 8        gap = 1;\n"
+    + " 9     }\n"
+    + "11     swapped = false;\n"
+    + "12     for (var i = 0; i < n - gap; i++) {\n"
+    + "13        if (list[i] > list[i + gap]) {\n"
+    + "14           var temp = list[i];\n"
+    + "15           list[i] = list[i + gap];\n"
+    + "16           list[i + gap] = temp;\n"
+    + "17           swapped = true;\n"
+    + "18        }\n"
+    + "19     }\n"
+    + "20  }\n";
 
+    document.getElementById("code-javascript").innerHTML = code1;
+
+    code1 = "\n" 
+    + " 1  // shell sort\n" 
+    + " 2  int n = list.length;\n"
+    + " 3  int gap = n;\n"
+    + " 4  boolean swapped = true;\n"
+    + " 5  while (gap != 1 || swapped == true) {\n"
+    + " 6     gap = (gap * 10) / 13;\n"
+    + " 7     if (gap < 1) {\n"
+    + " 8        gap = 1;\n"
+    + " 9     }\n"
+    + "11     swapped = false;\n"
+    + "12     for (int i = 0; i < n - gap; i++) {\n"
+    + "13        if (list[i] > list[i + gap]) {\n"
+    + "14           int temp = list[i];\n"
+    + "15           list[i] = list[i + gap];\n"
+    + "16           list[i + gap] = temp;\n"
+    + "17           swapped = true;\n"
+    + "18        }\n"
+    + "19     }\n"
+    + "20  }\n";
+
+    document.getElementById("code-java").innerHTML = code1;
+
+    code1 = "\n" 
+    + " 1  # shell sort\n" 
+    + " 2  n = len(list)\n"
+    + " 3  swapped = True\n"
+    + " 4  while gap != 1 or swapped == 1:\n"
+    + " 5     gap = (gap * 10) / 13\n"
+    + " 6     if gap < 1:\n"
+    + " 7        gap = 1\n"
+    + " 8     swapped = False\n"
+    + " 9     for i in range(0, n - gap):\n"
+    + "10        if list[i] > list[i + gap]:\n"
+    + "11           list[i], list[i + gap] = list[i + gap], list[i]\n"
+    + "12           swapped = True\n";
+
+    document.getElementById("code-python").innerHTML = code1;
+
+}
 
 async function shellSort() {
+    showCode4();
     //disable randomize button
     disableButtons();
     //start sort
