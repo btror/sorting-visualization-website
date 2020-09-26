@@ -121,4 +121,21 @@
     }
 }
 
+#display-java pre {
+    background: rgb(36, 35, 35);
+    color: rgb(236, 199, 32);
+    
+}
 
+
+#display-javascript pre {
+    background: rgb(36, 35, 35);
+    color: rgb(32, 222, 236);
+    
+}
+
+#display-python pre {
+    background: rgb(36, 35, 35);
+    color: rgb(65, 201, 38);
+    
+}
