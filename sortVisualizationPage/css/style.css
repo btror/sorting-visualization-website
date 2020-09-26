@@ -1,0 +1,124 @@
+
+
+#canvas-div {
+    width: 100%;
+}
+
+.container {
+    width: 815px;
+}
+
+#speed-dial {
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    float: right;
+    margin-top: -605px;
+}
+
+#speed-dial h3 {
+    font-size: 20px;
+}
+
+#myCanvas {
+    display: table;
+    margin: 0 auto;
+    border-top:2px solid #000000; 
+    background: white;
+}
+
+.btn {
+    background: #21447a;
+}
+
+@media screen and (min-width: 1921px) {
+    .page-title {
+        font-size: 50px;
+        color: white;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin-top: 10px;
+    }
+
+    #toolbar {
+        width: 100%;
+        height: 100px;
+        background-color: #5376ad;
+    }
+}
+
+@media screen and (min-width: 1420px) and (max-width: 1920px) {
+    .page-title {
+        font-size: 50px;
+        color: white;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin-top: 10px;
+    }
+
+    #toolbar {
+        width: 100%;
+        height: 100px;
+        background-color: #5376ad;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1419px) {
+    .page-title {
+        font-size: 40px;
+        color: white;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin-top: 45px;
+    }
+
+    #toolbar {
+        width: 100%;
+        height: 150px;
+        background-color: #5376ad;
+    }
+
+}
+
+@media screen and (min-width: 816px) and (max-width: 1099px) {
+    .page-title {
+        font-size: 29px;
+        color: white;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin-top: 55px;
+    }
+
+    #toolbar {
+        width: 100%;
+        height: 150px;
+        background-color: #5376ad;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 815px) {
+    .page-title {
+        font-size: 33px;
+        color: white;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin-top: 55px;
+    }
+
+    #toolbar {
+        width: 100%;
+        height: 200px;
+        background-color: #5376ad;
+    }
+}
+
+@media screen and (min-width: 80px) and (max-width: 767px) {
+    .page-title {
+        font-size: 25px;
+        color: white;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin-top: 45px;
+    }
+
+    #toolbar {
+        width: 100%;
+        height: 250px;
+        background-color: #5376ad;
+    }
+}
+
+

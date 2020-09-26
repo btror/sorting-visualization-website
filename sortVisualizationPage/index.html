@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort visualization</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="page-title">
+                        Sort Visualizer
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary" id="sort-bubble" style="margin-top: 30px;" onclick="bubbleSort()">bubble</button>
+                    <button type="button" class="btn btn-primary" id="sort-selection" style="margin-top: 30px" onclick="selectionSort()">selection</button>
+                    <button type="button" class="btn btn-primary" id="sort-insertion" style="margin-top: 30px" onclick="insertionSort()">insertion</button>
+                    <button type="button" class="btn btn-primary" id="sort-comb" style="margin-top: 30px" onclick="combSort()">comb</button>
+                    <button type="button" class="btn btn-primary" id="sort-shell" style="margin-top: 30px" onclick="shellSort()">shell</button>
+                    <!--<button type="button" class="btn btn-primary" id="sort-quick" style="margin-top: 30px" onclick="quickSort()">quick</button>-->
+                    <!--<button type="button" class="btn btn-primary" id="sort-heap" style="margin-top: 30px" onclick="heapSort()">heap</button>-->
+                    <!--<button type="button" class="btn btn-primary" id="sort-merge" style="margin-top: 30px">merge</button>-->
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary" id="randomize" style="margin-top: 30px" onclick="randomize()">generate new array</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="margin-top: 30px">
+                            change speed <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#" onclick="setSpeed1()">1x</a></li>
+                            <li><a href="#" onclick="setSpeed2()">2x</a></li>
+                            <li><a href="#" onclick="setSpeed4()">4x</a></li>
+                            <li><a href="#" onclick="setSpeed8()">8x</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    
+    <div id="canvas-div">
+        <div class="container">
+            <canvas id="myCanvas" width="805px" height="550px"></canvas>
+            <div id="speed-dial">
+                <h3>speed: 1x</h3>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="js/bubble.js"></script>
+    <script src="js/selection.js"></script>
+    <script src="js/insertion.js"></script>
+    <script src="js/comb.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/randomize.js"></script>
+    <script src="js/changespeed.js"></script>
+</body>
+</html>
