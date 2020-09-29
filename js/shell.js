@@ -10,63 +10,60 @@ ctx.font="17px Verdana";
 function showCode4() {
     var code1 = "\n" 
     + " 1  // shell sort\n" 
-    + " 2  var n = list.length;\n"
-    + " 3  var gap = n;\n"
-    + " 4  var swapped = true;\n"
-    + " 5  while (gap != 1 || swapped === true) {\n"
-    + " 6     gap = Math.floor((gap * 10) / 13);\n"
-    + " 7     if (gap < 1) {\n"
-    + " 8        gap = 1;\n"
-    + " 9     }\n"
-    + "11     swapped = false;\n"
-    + "12     for (var i = 0; i < n - gap; i++) {\n"
-    + "13        if (list[i] > list[i + gap]) {\n"
-    + "14           var temp = list[i];\n"
-    + "15           list[i] = list[i + gap];\n"
-    + "16           list[i + gap] = temp;\n"
-    + "17           swapped = true;\n"
-    + "18        }\n"
-    + "19     }\n"
-    + "20  }\n";
+    + " 2  var increment = list.length / 2;\n"
+    + " 3  while (increment > 0) {\n"
+    + " 4     for (i = increment; i < list.length; i++) {\n"
+    + " 5        var j = i;\n"
+    + " 6        var temp = list[i];\n"
+    + " 7        while (j >= increment && list[j-increment] > temp) {\n"
+    + " 8           list[j] = list[j-increment];\n"
+    + " 9           j = j - increment;\n"
+    + "11        }\n"
+    + "12        list[j] = temp;\n"
+    + "13     }\n"
+    + "14     if (increment == 2) {\n"
+    + "15        increment = 1;\n"
+    + "16     } else {\n"
+    + "17        increment = parseInt(increment * 5 / 11);\n"
+    + "18     }\n"
+    + "19  }\n";
 
     document.getElementById("code-javascript").innerHTML = code1;
 
     code1 = "\n" 
     + " 1  // shell sort\n" 
-    + " 2  int n = list.length;\n"
-    + " 3  int gap = n;\n"
-    + " 4  boolean swapped = true;\n"
-    + " 5  while (gap != 1 || swapped == true) {\n"
-    + " 6     gap = (gap * 10) / 13;\n"
-    + " 7     if (gap < 1) {\n"
-    + " 8        gap = 1;\n"
-    + " 9     }\n"
-    + "11     swapped = false;\n"
-    + "12     for (int i = 0; i < n - gap; i++) {\n"
-    + "13        if (list[i] > list[i + gap]) {\n"
-    + "14           int temp = list[i];\n"
-    + "15           list[i] = list[i + gap];\n"
-    + "16           list[i + gap] = temp;\n"
-    + "17           swapped = true;\n"
-    + "18        }\n"
-    + "19     }\n"
-    + "20  }\n";
+    + " 2  int increment = list.length / 2;\n"
+    + " 3  while (increment > 0) {\n"
+    + " 4     for (i = increment; i < list.length; i++) {\n"
+    + " 5        int j = i;\n"
+    + " 6        int temp = list[i];\n"
+    + " 7        while (j >= increment && list[j-increment] > temp) {\n"
+    + " 8           list[j] = list[j-increment];\n"
+    + " 9           j = j - increment;\n"
+    + "11        }\n"
+    + "12        list[j] = temp;\n"
+    + "13     }\n"
+    + "14     if (increment == 2) {\n"
+    + "15        increment = 1;\n"
+    + "16     } else {\n"
+    + "17        increment = parseInt(increment * 5 / 11);\n"
+    + "18     }\n"
+    + "19  }\n";
 
     document.getElementById("code-java").innerHTML = code1;
 
     code1 = "\n" 
     + " 1  # shell sort\n" 
     + " 2  n = len(list)\n"
-    + " 3  swapped = True\n"
-    + " 4  while gap != 1 or swapped == 1:\n"
-    + " 5     gap = (gap * 10) / 13\n"
-    + " 6     if gap < 1:\n"
-    + " 7        gap = 1\n"
-    + " 8     swapped = False\n"
-    + " 9     for i in range(0, n - gap):\n"
-    + "10        if list[i] > list[i + gap]:\n"
-    + "11           list[i], list[i + gap] = list[i + gap], list[i]\n"
-    + "12           swapped = True\n";
+    + " 3  gap = n / 2\n"
+    + " 4  while gap > 0:\n"
+    + " 5     for i in range(gap, n):\n"
+    + " 6        temp = list[i]\n"
+    + " 7        j = i\n"
+    + " 8        while j >= gap and list[j - gap] > temp:\n"
+    + " 9           list[j] = list[j - gap]\n"
+    + "10        list[j] = temp\n"
+    + "11     gap /= 2\n";
 
     document.getElementById("code-python").innerHTML = code1;
 
@@ -83,21 +80,15 @@ async function shellSort() {
         for (i = increment; i < list.length; i++) {
             let j = i;
             let temp = list[i];
-            // const result1 = await resolve(globalVariable.speed);
-            // repaint(list, i);
-    
             while (j >= increment && list[j-increment] > temp) {
                 repaint(list, i);
                 list[j] = list[j-increment];
                 j = j - increment;
                 repaint(list, i);
-                //const result1 = await resolve(globalVariable.speed);
-                //repaint(list, i);
             }
     
             list[j] = temp;
             repaint(list, i);
-            //const result1 = await resolve(globalVariable.speed);
             const result1 = await resolve(globalVariable.speed);
             repaint(list, i);
             
